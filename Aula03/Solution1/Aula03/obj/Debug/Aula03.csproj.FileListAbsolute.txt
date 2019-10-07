@@ -1,0 +1,6 @@
+C:\Users\torre\Desktop\Estudo .Net\Aula03\Solution1\Aula03\bin\Debug\Aula03.exe.config
+C:\Users\torre\Desktop\Estudo .Net\Aula03\Solution1\Aula03\bin\Debug\Aula03.exe
+C:\Users\torre\Desktop\Estudo .Net\Aula03\Solution1\Aula03\bin\Debug\Aula03.pdb
+C:\Users\torre\Desktop\Estudo .Net\Aula03\Solution1\Aula03\obj\Debug\Aula03.csprojAssemblyReference.cache
+C:\Users\torre\Desktop\Estudo .Net\Aula03\Solution1\Aula03\obj\Debug\Aula03.exe
+C:\Users\torre\Desktop\Estudo .Net\Aula03\Solution1\Aula03\obj\Debug\Aula03.pdb
