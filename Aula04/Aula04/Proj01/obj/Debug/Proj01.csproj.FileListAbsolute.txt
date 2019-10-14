@@ -1,0 +1,8 @@
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula04\Aula04\Proj01\bin\Debug\App_Data\Database.mdf
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula04\Aula04\Proj01\bin\Debug\App_Data\Database_log.ldf
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula04\Aula04\Proj01\bin\Debug\Proj01.exe.config
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula04\Aula04\Proj01\bin\Debug\Proj01.exe
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula04\Aula04\Proj01\bin\Debug\Proj01.pdb
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula04\Aula04\Proj01\obj\Debug\Proj01.exe
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula04\Aula04\Proj01\obj\Debug\Proj01.pdb
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula04\Aula04\Proj01\obj\Debug\Proj01.csprojAssemblyReference.cache
