@@ -101,6 +101,11 @@ namespace Proj01.Controles
             var query = from cli in listagemClientes
                         where cli.IdCliente == c.IdCliente
                         select cli;
+
+            if (query.Count() == 0)
+            {
+                listagemClientes.Add(c);
+            }
         }
     }
 }

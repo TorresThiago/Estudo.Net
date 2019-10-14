@@ -1,0 +1,7 @@
+E:\Estudo\Estudo.Net\Aula05\Aula05\Proj01\bin\Debug\Proj01.exe.config
+E:\Estudo\Estudo.Net\Aula05\Aula05\Proj01\bin\Debug\Proj01.exe
+E:\Estudo\Estudo.Net\Aula05\Aula05\Proj01\bin\Debug\Proj01.pdb
+E:\Estudo\Estudo.Net\Aula05\Aula05\Proj01\obj\Debug\Proj01.csprojAssemblyReference.cache
+E:\Estudo\Estudo.Net\Aula05\Aula05\Proj01\obj\Debug\Proj01.csproj.CoreCompileInputs.cache
+E:\Estudo\Estudo.Net\Aula05\Aula05\Proj01\obj\Debug\Proj01.exe
+E:\Estudo\Estudo.Net\Aula05\Aula05\Proj01\obj\Debug\Proj01.pdb
