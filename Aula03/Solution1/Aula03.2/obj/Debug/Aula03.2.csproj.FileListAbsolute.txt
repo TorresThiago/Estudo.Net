@@ -4,3 +4,9 @@ C:\Users\torre\Desktop\Estudo .Net\Aula03\Solution1\Aula03.2\bin\Debug\Aula03.2.
 C:\Users\torre\Desktop\Estudo .Net\Aula03\Solution1\Aula03.2\obj\Debug\Aula03.2.csprojAssemblyReference.cache
 C:\Users\torre\Desktop\Estudo .Net\Aula03\Solution1\Aula03.2\obj\Debug\Aula03.2.exe
 C:\Users\torre\Desktop\Estudo .Net\Aula03\Solution1\Aula03.2\obj\Debug\Aula03.2.pdb
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula03\Solution1\Aula03.2\bin\Debug\Aula03.2.exe.config
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula03\Solution1\Aula03.2\bin\Debug\Aula03.2.exe
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula03\Solution1\Aula03.2\bin\Debug\Aula03.2.pdb
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula03\Solution1\Aula03.2\obj\Debug\Aula03.2.csprojAssemblyReference.cache
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula03\Solution1\Aula03.2\obj\Debug\Aula03.2.exe
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula03\Solution1\Aula03.2\obj\Debug\Aula03.2.pdb

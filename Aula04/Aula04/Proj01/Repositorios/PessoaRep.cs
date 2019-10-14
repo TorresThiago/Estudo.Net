@@ -31,7 +31,7 @@ namespace Proj01.Repositorios
         {
             string query = "UPDATE PESSOA "
                          + "SET Nome = @Nome, "
-                         + "SET DataNascimento  = @DataNascimento "
+                         + "DataNascimento  = @DataNascimento "
                          + "WHERE IdPessoa      = @IdPessoa ";
 
             cmd = new SqlCommand(query, con);
@@ -44,7 +44,7 @@ namespace Proj01.Repositorios
 
         public void Excluir(Pessoa p)
         {
-            string query = "DELETE PESSOA   "                     
+            string query = "DELETE FROM PESSOA   "                     
                          + "WHERE IdPessoa  = @IdPessoa ";
 
             cmd = new SqlCommand(query, con);
