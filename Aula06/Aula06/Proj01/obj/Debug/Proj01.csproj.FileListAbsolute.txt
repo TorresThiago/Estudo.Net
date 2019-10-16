@@ -1,0 +1,11 @@
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula06\Aula06\Proj01\bin\Debug\Proj01.exe.config
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula06\Aula06\Proj01\bin\Debug\Proj01.exe
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula06\Aula06\Proj01\bin\Debug\Proj01.pdb
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula06\Aula06\Proj01\bin\Debug\EntityFramework.dll
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula06\Aula06\Proj01\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula06\Aula06\Proj01\bin\Debug\EntityFramework.xml
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula06\Aula06\Proj01\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula06\Aula06\Proj01\obj\Debug\Proj01.csprojAssemblyReference.cache
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula06\Aula06\Proj01\obj\Debug\Proj01.csproj.CopyComplete
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula06\Aula06\Proj01\obj\Debug\Proj01.exe
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula06\Aula06\Proj01\obj\Debug\Proj01.pdb
