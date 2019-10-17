@@ -1,0 +1,6 @@
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula06\Aula06\Proj02\bin\Debug\Proj02.exe.config
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula06\Aula06\Proj02\bin\Debug\Proj02.exe
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula06\Aula06\Proj02\bin\Debug\Proj02.pdb
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula06\Aula06\Proj02\obj\Debug\Proj02.csprojAssemblyReference.cache
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula06\Aula06\Proj02\obj\Debug\Proj02.exe
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula06\Aula06\Proj02\obj\Debug\Proj02.pdb
