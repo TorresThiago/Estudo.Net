@@ -1,0 +1,41 @@
+﻿
+@model Projeto.WEB.Models.ClienteCadastroModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Estudo .Net</title>
+    
+</head>
+<body>
+    <div>
+        <h1>Cadastro de Clientes</h1>
+        <a href="/Home/Index">Página inicial</a>
+        <hr />
+
+        @*<form>*@
+        @using (Html.BeginForm("Cadastro", "Cliente", FormMethod.Post))
+        {
+            <label>Nome do Cliente:</label> <br />
+            @*<input type="text" name="Nome" placeholder="Digite Aqui" />*@
+            @Html.TextBoxFor(model => model.Nome, new { @placeholder = "Digite aqui" })
+            @Html.ValidationMessageFor(model => model.Nome)
+            <br /><br />
+
+            <label>E-mail do Cliente:</label> <br />
+            @*<input type="text" name="Email" placeholder="Digite Aqui" />*@
+            @Html.TextBoxFor(model => model.Email, new { @placeholder = "Digite aqui" })
+            @Html.ValidationMessageFor(model => model.Email)
+            <br /><br />
+
+            <input type="submit" value="Cadastrar Cliente" />
+
+            <strong>@ViewBag.Mensagem</strong>
+        }
+        @*</form>*@
+
+    </div>
+</body>
+</html>
