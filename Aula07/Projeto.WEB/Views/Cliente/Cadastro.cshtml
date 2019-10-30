@@ -20,22 +20,24 @@
         {
             <label>Nome do Cliente:</label> <br />
             @*<input type="text" name="Nome" placeholder="Digite Aqui" />*@
-            @Html.TextBoxFor(model => model.Nome, new { @placeholder = "Digite aqui" })
-            @Html.ValidationMessageFor(model => model.Nome)
+            @Html.TextBoxFor(model => model.Nome, new { @placeholder = "Digite aqui" })            
+            @Html.ValidationMessageFor(model => model.Nome, string.Empty, new { @class = "alert alert-danger", @role = "alert" })
+            
             <br /><br />
 
             <label>E-mail do Cliente:</label> <br />
             @*<input type="text" name="Email" placeholder="Digite Aqui" />*@
-            @Html.TextBoxFor(model => model.Email, new { @placeholder = "Digite aqui" })
-            @Html.ValidationMessageFor(model => model.Email)
-            <br /><br />
+            @Html.TextBoxFor(model => model.Email, new { @placeholder = "Digite aqui" })            
+            @Html.ValidationMessageFor(model => model.Email, string.Empty, new { @class = "alert alert-danger", @role= "alert" })           
+                <br /><br />
 
-            <input type="submit" value="Cadastrar Cliente" />
+                <input type="submit" class="btn btn-success" value="Cadastrar Cliente" />
+                <br /><br />
 
-            <strong>@ViewBag.Mensagem</strong>
-        }
-        @*</form>*@
+                <strong>@ViewBag.Mensagem</strong>
+                }
+                @*</form>*@
 
-    </div>
+            </div>
 </body>
 </html>
