@@ -25,6 +25,63 @@ namespace Projeto.DAL.Repositories
             CloseConnection();
         }
 
+        public void Update(Cliente c)
+        {
+            OpenConnection();
+
+            string query = "UPDATE CLIENTE "
+                          + "SET NOME = @NOME AND EMAIL = @EMAIL "
+                          + "WHERE IDCLIENTE = @IDCLIENTE";
+
+            cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@NOME", c.Nome);
+            cmd.Parameters.AddWithValue("@EMAIL",c.Email);
+            cmd.ExecuteNonQuery();
+
+            CloseConnection();
+        }
+
+        public void Delete(int idCliente)
+        {
+            OpenConnection();
+
+            string query = "DELETE FROM CLIENTE WHERE IDCLIENTE = @IDCLIENTE";
+
+            cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@IDCLIENTE", idCliente);
+            cmd.ExecuteNonQuery();
+
+            CloseConnection();
+        }
+
+        public List<Cliente> FindAll()
+        {
+            OpenConnection();
+
+            string query = "SELECT * FROM CLIENTE";
+
+            cmd = new SqlCommand(query, con);
+            dr = cmd.ExecuteReader();
+
+            List<Cliente> lista = new List<Cliente>();
+
+            while (dr.Read())
+            {
+                Cliente c = new Cliente();
+                c.IdCliente = (int)dr["IdCliente"];
+                c.Nome = (string)dr["Nome"];
+                c.Email = (string)dr["Email"];
+                c.DataCadastro = (DateTime)dr["DataCadastro"];
+
+                lista.Add(c);
+            }
+
+            CloseConnection();
+
+            return lista;
+
+        }
+
         public bool HasEmail(string email)
         {
             OpenConnection();

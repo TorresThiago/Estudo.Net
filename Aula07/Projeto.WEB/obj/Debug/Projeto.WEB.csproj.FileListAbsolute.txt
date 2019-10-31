@@ -149,3 +149,5 @@ E:\Estudo\Estudo.Net\Aula07\Projeto.WEB\obj\Debug\Projeto.WEB.csproj.CoreCompile
 E:\Estudo\Estudo.Net\Aula07\Projeto.WEB\obj\Debug\Projeto.WEB.csproj.CopyComplete
 E:\Estudo\Estudo.Net\Aula07\Projeto.WEB\obj\Debug\Projeto.WEB.dll
 E:\Estudo\Estudo.Net\Aula07\Projeto.WEB\obj\Debug\Projeto.WEB.pdb
+E:\Estudo\Estudo.Net\Aula07\Projeto.WEB\bin\Projeto.DAL.dll
+E:\Estudo\Estudo.Net\Aula07\Projeto.WEB\bin\Projeto.DAL.pdb

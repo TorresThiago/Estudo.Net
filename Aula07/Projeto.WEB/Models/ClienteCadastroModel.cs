@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;//Mapeamentos
+using Projeto.WEB.Validations;
 
 namespace Projeto.WEB.Models
 {
@@ -13,8 +14,9 @@ namespace Projeto.WEB.Models
         [Required(ErrorMessage = "Por favor, informe o nome do Cliente.")]
         public string Nome { get; set; }
 
+        [EmailUnicoValidation(ErrorMessage = "E-mail já cadastrado.")]
         [Required(ErrorMessage = "Por favor, informe um e-mail do Cliente.")]
-        [EmailAddress(ErrorMessage = "Por favor, informe um e-mail válido.")]
+        [EmailAddress(ErrorMessage = "Por favor, informe um e-mail válido.")]        
         public string Email { get; set; }
     }
 }

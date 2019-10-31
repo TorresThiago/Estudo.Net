@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Projeto.WEB.Models;
+using Projeto.DAL.Entities;
+using Projeto.DAL.Repositories;
 
 namespace Projeto.WEB.Controllers
 {
@@ -22,8 +24,26 @@ namespace Projeto.WEB.Controllers
             //estão corretos (passaram nas validações?)
             if (ModelState.IsValid)
             {
-                //Criando msg q sera exibida na página
-                ViewBag.Mensagem = "Cliente cadastrado com sucesso.";
+                try
+                {
+                    Cliente c = new Cliente();
+
+                    c.Nome = model.Nome;
+                    c.Email = model.Email;
+
+                    ClienteRepository rep = new ClienteRepository();
+
+                    rep.Insert(c);
+                                       
+                    //Criando msg q sera exibida na página
+                    ViewBag.Mensagem = "Cliente cadastrado com sucesso.";
+                    ModelState.Clear();
+                }
+                catch (Exception e)
+                {
+                    ViewBag.Mensagem = "Erro ao cadastrar Cliente - " + e.Message;
+                }
+                
             }
             return View();
         }
