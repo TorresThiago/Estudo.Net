@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿
+<!--É preciso declarar a classe de modelo desta página -->
+@model List<Projeto.WEB.Models.ClienteConsultaModel>
+
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -12,6 +16,10 @@
         <h1>Consulta de Clientes</h1>
         <a href="/Home/Index">Página Inicial</a>
 
+        <div>
+            @ViewBag.Mensagem
+        </div>
+
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
@@ -23,17 +31,37 @@
                 </tr>
             </thead>
             <tbody>
-
+                @foreach(var v in Model)
+                {
+                <tr>
+                    <td>@v.IdCliente</td>
+                    <td>@v.Email</td>
+                    <td>@v.Email</td>
+                    <td>@v.DataCadastro</td>
+                    <td>
+                        <a href="/Cliente/Edicao?idCliente=@v.IdCliente" class="btn btn-primary btn-sm">Atualizar</a>
+                        <a href="/Cliente/Exclusao?idCliente=@v.IdCliente" class="btn btn-danger btn-sm">Excluir</a>
+                    </td>
+                </tr>
+                }
             </tbody>
             <tfoot>
                 <tr>
                     <td colspan="5">
-                        Quantidade de Clientes:
+                        Quantidade de Clientes: @Model.Count
                     </td>
                 </tr>
             </tfoot>
         </table>
 
     </div>
+<script type="text/javascript">]
+    function confirmExclusao(){
+        return window.confirm('Deseja excluir o cliente selecionado?');
+    }
+
+
+</script>
 </body>
 </html>
+

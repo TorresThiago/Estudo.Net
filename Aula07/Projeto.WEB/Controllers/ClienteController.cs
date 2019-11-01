@@ -50,7 +50,37 @@ namespace Projeto.WEB.Controllers
 
         public ActionResult Consulta()
         {
-            return View();
+            List<ClienteConsultaModel> lista = ObterConsultaDeCliente();
+
+            return View(lista);
+        }
+
+        private List<ClienteConsultaModel> ObterConsultaDeCliente()
+        {
+            List<ClienteConsultaModel> lista = new List<ClienteConsultaModel>();
+
+            try
+            {
+                ClienteRepository rep = new ClienteRepository();
+                List<Cliente> listagemCliente = rep.FindAll();
+
+                foreach (Cliente c in listagemCliente)
+                {
+                    ClienteConsultaModel model = new ClienteConsultaModel();
+                    model.IdCliente = c.IdCliente;
+                    model.Nome = c.Nome;
+                    model.Email = c.Email;
+                    model.DataCadastro = c.DataCadastro;
+
+                    lista.Add(model);
+                }
+            }
+            catch (Exception e)
+            {
+                ViewBag.Mensagem = "Erro ao consultar Cliente - " + e.Message;
+            }
+
+            return lista;
         }
     }
 }
