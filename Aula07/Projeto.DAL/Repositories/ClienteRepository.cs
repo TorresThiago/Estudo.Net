@@ -77,9 +77,34 @@ namespace Projeto.DAL.Repositories
             }
 
             CloseConnection();
-
             return lista;
+        }
 
+        public Cliente FindById(int idCliente)
+        {
+            OpenConnection();
+
+            string query = "SELECT * FROM CLIENTE WHERE IDCLIENTE = @IDCLIENTE";
+
+
+            cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@IDCLIENTE", idCliente);
+            dr = cmd.ExecuteReader();
+
+            Cliente c = null;
+
+            if (dr.Read())
+            {
+                c = new Cliente();
+
+                c.IdCliente = (int)dr["IdCliente"];
+                c.Nome = (string)dr["Nome"];
+                c.Email = (string)dr["Email"];
+                c.DataCadastro = (DateTime)dr["DataCadastro"];
+            }
+
+            CloseConnection();
+            return c;
         }
 
         public bool HasEmail(string email)

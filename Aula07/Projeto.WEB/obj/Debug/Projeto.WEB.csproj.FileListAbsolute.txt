@@ -151,3 +151,5 @@ E:\Estudo\Estudo.Net\Aula07\Projeto.WEB\obj\Debug\Projeto.WEB.dll
 E:\Estudo\Estudo.Net\Aula07\Projeto.WEB\obj\Debug\Projeto.WEB.pdb
 E:\Estudo\Estudo.Net\Aula07\Projeto.WEB\bin\Projeto.DAL.dll
 E:\Estudo\Estudo.Net\Aula07\Projeto.WEB\bin\Projeto.DAL.pdb
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula07\Projeto.WEB\bin\Projeto.DAL.dll
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula07\Projeto.WEB\bin\Projeto.DAL.pdb
