@@ -17,6 +17,73 @@ namespace Projeto.WEB.Controllers
             return View();
         }
 
+        public ActionResult Edicao(int idCliente)
+        {
+            ClienteEdicaoModel model = new ClienteEdicaoModel();
+
+            try
+            {
+                ClienteRepository rep = new ClienteRepository();
+                Cliente c = rep.FindById(idCliente);
+
+                model.IdCliente = c.IdCliente;
+                model.Nome = c.Nome;
+                model.Email = c.Email;
+            }
+            catch (Exception e)
+            {
+                ViewBag.Mensagem = e.Message;                
+            }
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Edicao(ClienteEdicaoModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    Cliente c = new Cliente();
+                    c.IdCliente = model.IdCliente;
+                    c.Nome = model.Nome;
+                    c.Email = model.Email;
+
+                    ClienteRepository rep = new ClienteRepository();
+                    rep.Update(c);
+                    ViewBag.Mensagem = "Cliente atualizado com sucesso.";
+
+                    List<ClienteConsultaModel> lista = ObterConsultaDeClientes();
+                    return View("Consulta", lista);
+                }
+                catch (Exception e)
+                {
+                    ViewBag.Mensagem = e.Message;
+                }
+            }
+            return View();
+        }
+
+            public ActionResult Exclusao(int idCliente)
+        {
+            try
+            {
+                ClienteRepository rep = new ClienteRepository();
+
+                rep.Delete(idCliente);
+
+                ViewBag.Mensagem = "Cliente excluído com sucesso.";
+            }
+            catch (Exception e)
+            {
+                ViewBag.Mensagem = e.Message;
+            }
+            List<ClienteConsultaModel> lista = ObterConsultaDeClientes();
+
+            return View("Consulta", lista);
+        }
+
         [HttpPost]
         public ActionResult Cadastro(ClienteCadastroModel model)
         {
@@ -50,12 +117,12 @@ namespace Projeto.WEB.Controllers
 
         public ActionResult Consulta()
         {
-            List<ClienteConsultaModel> lista = ObterConsultaDeCliente();
+            List<ClienteConsultaModel> lista = ObterConsultaDeClientes();
 
             return View(lista);
         }
 
-        private List<ClienteConsultaModel> ObterConsultaDeCliente()
+        private List<ClienteConsultaModel> ObterConsultaDeClientes()
         {
             List<ClienteConsultaModel> lista = new List<ClienteConsultaModel>();
 

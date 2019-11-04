@@ -1,0 +1,47 @@
+﻿@model Projeto.WEB.Models.ClienteEdicaoModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Estudo .Net</title>
+
+    <link href="~/Content/bootstrap.min.css"/>
+</head>
+<body class="container">
+    <div>
+        <h1>Edição Clientes</h1>
+        <a href="/Cliente/Consulta">Consultar Clientes</a>
+        <hr />
+
+        @using (Html.BeginForm("Edicao", "Cliente", FormMethod.Post))
+        {
+            @Html.HiddenFor(model => model.IdCliente)
+
+            <label>Nome do Cliente: </label><br />
+            @Html.TextBoxFor(model => model.Nome, new { @class = "form-control", @placeholder = "Digite Aqui" })
+
+            <div class="text-danger">
+                @Html.ValidationMessageFor(model => model.Nome)
+            </div>
+
+            <br /><br />
+
+            <label>E-mail do Cliente: </label><br />
+            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @placeholder = "Digite Aqui" })
+
+            <div class="text-danger">
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+
+            <input type="submit" value="Cadastrar Cliente" class="btn btn-success" />
+
+
+            <br /><br />
+            <strong>@ViewBag.Mensagem</strong>
+        }
+
+    </div>
+</body>
+</html>

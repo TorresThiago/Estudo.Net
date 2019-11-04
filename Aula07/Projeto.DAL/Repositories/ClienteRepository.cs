@@ -30,12 +30,13 @@ namespace Projeto.DAL.Repositories
             OpenConnection();
 
             string query = "UPDATE CLIENTE "
-                          + "SET NOME = @NOME AND EMAIL = @EMAIL "
+                          + "SET NOME = @NOME, EMAIL = @EMAIL "
                           + "WHERE IDCLIENTE = @IDCLIENTE";
 
             cmd = new SqlCommand(query, con);
             cmd.Parameters.AddWithValue("@NOME", c.Nome);
             cmd.Parameters.AddWithValue("@EMAIL",c.Email);
+            cmd.Parameters.AddWithValue("@IDCLIENTE", c.IdCliente);
             cmd.ExecuteNonQuery();
 
             CloseConnection();
