@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Cadastro";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@section script{
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+    
+    <script text="text/javascript">
+        $(document).ready(function () {
+            $("#btncadastro").click(function () {
+
+            });
+        });
+    </script>
+}
+<h4>Cadastro de Estoque</h4>
+<a href="/Home/Index">Página inicial</a>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <label>Nome do Estoque:</label>
+        <input type="text" id="nome" class="form-control" />
+        <br />
+
+        <label>Descrição do Estoque:</label>
+        <textarea id="descricao" class="form-control" rows="6"></textarea>
+        <br />
+
+        <label>Tipo do Estoque</label>
+        <select id="tipo" class="form-control">
+            <option value="">Selecione uma Opção</option>
+            <option value="1">Informática</option>
+            <option value="2">Eletrônicos</option>
+            <option value="3">Livraria</option>
+            <option value="4">Games</option>
+            <option value="5">Outros</option>
+        </select>
+        <br />
+
+        <button id="btncadastro" class="btn btn-success">
+            Cadastrar Estoque
+        </button>
+        <br />
+        <br />
+
+        <div id="mensagem"></div>
+
+    </div>
+</div>
+

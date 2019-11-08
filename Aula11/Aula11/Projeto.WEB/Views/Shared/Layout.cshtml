@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Estudo .Net</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet"/>
+
+</head>
+<body class="container">
+    <div class="card">
+        <div>
+            <h3>Projeto de Controle de Estoques</h3>
+            C# WebDeveloper
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <!--Coluna tamanho 12-->
+            <!--local para entrada do conteúdo das demais páginas-->
+            @RenderBody()
+        </div>
+    </div>
+
+    <!-- Seção para a area javascript -->
+    @RenderSection("scripts", required: false)
+</body>
+</html>

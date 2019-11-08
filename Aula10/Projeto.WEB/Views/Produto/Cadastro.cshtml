@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Cadastro";
+}
+
+<!DOCTYPE html>
+<html>
+<hrad>
+    <meta name="viewport" content="width=device-width" />
+    <title>Estudo .Net - Jquery</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</hrad>
+<body class="container">
+    <div>
+        <h2>Formulário de Cadastro de Produto</h2> 
+        <a href="/Home/Index">Página Inicial</a>
+
+        <span id="texto"></span>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-md-4">
+                <label>Nome do Produto:</label>
+                <input type="text" id="nome" class="form-control" placeholder="Nome" />
+                <br />
+
+                <label>Preço:</label>
+                <input type="text" id="preco" class="form-control" placeholder="Preço" />
+                <br />
+
+                <label>Quantidade:</label>
+                <input type="text" id="quantidade" class="form-control" placeholder="Quantidade" />
+                <br />
+
+                <button id="btncadastro" class="btn btn-success">
+                    Cadastrar Produto
+                </button>
+
+                <br />
+                <br />
+
+                <strong>
+                    <span id="mensagem"></span>
+                </strong>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#texto").html("Preencha o formulário abaixo:");
+                $("#btncadastro").click(function () {
+                var model = {
+                    Nome: $("#nome").val(),
+                    Preco: $("#preco").val(),
+                    Quantidade: $("#quantidade").val()
+                };
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Produto/CadastrarProduto",
+                    data: model,
+                    success: function (msg) {
+                        $("#mensagem").html(msg);
+
+                        $("#nome").val("");
+                        $("#preco").val("");
+                        $("#quantidade").val("");
+                    },
+                    error: function (e) {
+                        $("#mensagem").html("Ocorreu um erro: " + e.status);
+                    }
+                });
+            });            
+        });
+    </script>
+</body>
+</html>
+
