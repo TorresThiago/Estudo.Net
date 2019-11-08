@@ -4,5 +4,48 @@
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<h2>Consulta</h2>
+@section scripts{
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "/Estoque/ConsultarEstoques",
+                data: {},
+                success: function () {
+
+                },
+                error: function (e) {
+                    $("#mensagem").html("Erro: " + e.status);
+                }
+            });
+        });
+    </script>
+}
+
+<h4>Consulta de Estoque</h4>
+<a href="/Home/Index">Página Inicial</a>
+
+<table id="tabela" class="table table-bordered">
+    <thead><!--cabeçalho-->        
+        <tr>
+            <!--Linha-->
+            <th>Código</th>
+            <th>Nome do Estoque</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Operações</th>
+        </tr>
+    </thead>
+    <tbody><!--Corpo-->
+
+    </tbody>
+    <tfoot><!--Rodape-->
+        <tr>
+            <td colspan="5">
+                Quantidade de Estoques: <span id="quantidade"></span>
+            </td>
+        </tr>
+    </tfoot>
+</table>
 

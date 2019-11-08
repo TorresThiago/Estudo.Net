@@ -4,15 +4,35 @@
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-@section script{
+@section scripts{
     <script src="~/Scripts/jquery-3.0.0.min.js"></script>
-    
-    <script text="text/javascript">
-        $(document).ready(function () {
-            $("#btncadastro").click(function () {
 
-            });
-        });
+    <script text="text/javascript">
+                $(document).ready(function () {
+                    $("#btncadastro").click(function () {
+                        var model = {
+                            Nome: $("#nome").val(),
+                            Descricao: $("#descricao").val(),
+                            Tipo: $("#tipo").val()
+                        };
+
+                        $.ajax({
+                            type: "POST",
+                            url: "/Estoque/CadastrarEstoque",
+                            data: model,
+                            success: function (msg) {
+                                $("#mensagem").html(msg);
+
+                                $("#nome").val("");
+                                $("#descricao").val("");
+                                $("#tipo").val("");
+                            },
+                            error: function (e) {
+                                $("#mensagem").html("Erro: " + e.status);
+                            }
+                        });
+                    });
+                });
     </script>
 }
 <h4>Cadastro de Estoque</h4>
