@@ -4,3 +4,8 @@ E:\Estudo\Estudo.Net\Aula11\Aula11\Projeto.DAL\obj\Debug\Projeto.DAL.csprojAssem
 E:\Estudo\Estudo.Net\Aula11\Aula11\Projeto.DAL\obj\Debug\Projeto.DAL.csproj.CoreCompileInputs.cache
 E:\Estudo\Estudo.Net\Aula11\Aula11\Projeto.DAL\obj\Debug\Projeto.DAL.dll
 E:\Estudo\Estudo.Net\Aula11\Aula11\Projeto.DAL\obj\Debug\Projeto.DAL.pdb
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula11\Aula11\Projeto.DAL\bin\Debug\Projeto.DAL.dll
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula11\Aula11\Projeto.DAL\bin\Debug\Projeto.DAL.pdb
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula11\Aula11\Projeto.DAL\obj\Debug\Projeto.DAL.csprojAssemblyReference.cache
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula11\Aula11\Projeto.DAL\obj\Debug\Projeto.DAL.dll
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula11\Aula11\Projeto.DAL\obj\Debug\Projeto.DAL.pdb

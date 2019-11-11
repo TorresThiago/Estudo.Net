@@ -6,14 +6,30 @@
 
 @section scripts{
     <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
             $.ajax({
                 type: "GET",
                 url: "/Estoque/ConsultarEstoques",
                 data: {},
-                success: function () {
-
+                success: function (lista) {
+                    var conteudo = "";
+                    $.each(lista, function (i, v) {
+                        conteudo += "<tr>";
+                        conteudo += "<td>" + v.IdEstoque + "</td>";
+                        conteudo += "<td>" + v.Nome + "</td>";
+                        conteudo += "<td>" + v.Descricao + "</td>";
+                        conteudo += "<td>" + v.Tipo + "</td>";
+                        conteudo += "<td>";
+                        conteudo += "<button type='button' data-target='#janelaExclusao' data-toggle='modal' class='btn btn-danger btn-sm'>Excluir</button>";
+                        conteudo += "&nbsp;";
+                        conteudo += "<button type='button' data-target='#janelaEdicao' data-toggle='modal' class='btn btn-primary btn-sm'>Atualizar</button>";
+                        conteudo += "</td>";
+                        conteudo += "</tr>";
+                    });
+                    $("#tabela tbody").html(conteudo);
+                    $("#quantidade").html(lista.length);
                 },
                 error: function (e) {
                     $("#mensagem").html("Erro: " + e.status);
@@ -25,6 +41,9 @@
 
 <h4>Consulta de Estoque</h4>
 <a href="/Home/Index">Página Inicial</a>
+<hr />
+
+<div id="mensagem"></div>
 
 <table id="tabela" class="table table-bordered">
     <thead><!--cabeçalho-->        
@@ -48,4 +67,85 @@
         </tr>
     </tfoot>
 </table>
+
+<!--Janela para excluir Produto-->
+<div id="janelaExclusao" class="modal fade" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h4 class="modal-title">Exclusão Estoque</h4>
+                <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+            </div>
+
+
+            <div class="modal-body">
+                <h4>Deseja excluir o estoque selecionado?</h4>
+                <hr />
+
+                Id do Estoque: <span id="idestoque_exclusao"></span>
+                <br />
+
+                Nome: <span id="nome_exclusao"></span>
+                <br />
+
+                Tipo: <span id="tipo_exclusao"></span>
+                <br />
+
+                Descrição: <span id="descricao_exclusao"></span>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-danger">
+                    Confirmar Exclusão
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="janelaEdicao" class="modal fade" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h4 class="modal-title">Edição Estoque</h4>
+                <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+            </div>
+
+
+            <div class="modal-body">
+                <label>Id do Estoque:</label>
+                <input type="text" id="idestoque" class="form-control" readonly="readonly" />
+                <br />
+
+                <label>Nome:</label>
+                <input type="text" id="nome" class="form-control" readonly="readonly" />
+                <br />
+
+                <label>Descrição:</label>
+                <input type="text" id="nome" class="form-control" readonly="readonly" />
+                <br />
+
+                <label>Tipo do Estoque:</label>
+                <select id="tipo" class="form-control">
+                    <option value="">Selecione uma Opção</option>
+                    <option value="1">Informática</option>
+                    <option value="2">Eletrônicos</option>
+                    <option value="3">Livraria</option>
+                    <option value="4">Games</option>
+                    <option value="5">Outros</option>
+                </select>
+                <br />
+
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary">
+                    Confirmar Atualização
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 

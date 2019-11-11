@@ -44,5 +44,32 @@ namespace Projeto.WEB.Controllers
 
             return Json("Estoque Cadastrado com sucesso");
         }
+
+        public JsonResult ConsultarEstoques()
+        {
+            try
+            {
+                EstoqueRepositorio rep = new EstoqueRepositorio();
+                List <EstoqueConsultaModel> lista = new List<EstoqueConsultaModel>();
+
+
+                foreach (Estoque e in rep.BuscarTodos())
+                {
+                    EstoqueConsultaModel model = new EstoqueConsultaModel();
+                    model.IdEstoque = e.IdEstoque;
+                    model.Nome = e.Nome;
+                    model.Descricao = e.Descricao;
+                    model.Tipo = e.Tipo.ToString();
+
+                    lista.Add(model);
+                }
+                return Json(lista,JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception e)
+            {
+                return Json(e.Message, JsonRequestBehavior.AllowGet);
+            }
+            
+        }
     }
 }
