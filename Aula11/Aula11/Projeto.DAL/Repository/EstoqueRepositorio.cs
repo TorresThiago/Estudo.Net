@@ -33,7 +33,7 @@ namespace Projeto.DAL.Repository
         {
             OpenConnection();
 
-            var query = "UPDATE ESTOQUE" +
+            var query = "UPDATE ESTOQUE " +
                         "SET Nome = @Nome " +
                         "   ,Descricao = @Descricao " +
                         "   ,Tipo = @Tipo " +
@@ -43,6 +43,7 @@ namespace Projeto.DAL.Repository
             cmd.Parameters.AddWithValue("@Nome", e.Nome);
             cmd.Parameters.AddWithValue("@Descricao", e.Descricao);
             cmd.Parameters.AddWithValue("@Tipo", e.Tipo);
+            cmd.Parameters.AddWithValue("@IdEstoque", e.IdEstoque);
             cmd.ExecuteNonQuery();
 
             CloseConnection();
@@ -54,7 +55,7 @@ namespace Projeto.DAL.Repository
 
             var query = "DELETE FROM ESTOQUE WHERE IdEstoque = @IdEstoque";
 
-            cmd = new SqlCommand();
+            cmd = new SqlCommand(query, con);
             cmd.Parameters.AddWithValue("@IdEstoque",idEstoque);
             cmd.ExecuteNonQuery();
 

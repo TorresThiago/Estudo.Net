@@ -7,36 +7,7 @@
 @section scripts{
     <script src="~/Scripts/jquery-3.0.0.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $.ajax({
-                type: "GET",
-                url: "/Estoque/ConsultarEstoques",
-                data: {},
-                success: function (lista) {
-                    var conteudo = "";
-                    $.each(lista, function (i, v) {
-                        conteudo += "<tr>";
-                        conteudo += "<td>" + v.IdEstoque + "</td>";
-                        conteudo += "<td>" + v.Nome + "</td>";
-                        conteudo += "<td>" + v.Descricao + "</td>";
-                        conteudo += "<td>" + v.Tipo + "</td>";
-                        conteudo += "<td>";
-                        conteudo += "<button type='button' data-target='#janelaExclusao' data-toggle='modal' class='btn btn-danger btn-sm'>Excluir</button>";
-                        conteudo += "&nbsp;";
-                        conteudo += "<button type='button' data-target='#janelaEdicao' data-toggle='modal' class='btn btn-primary btn-sm'>Atualizar</button>";
-                        conteudo += "</td>";
-                        conteudo += "</tr>";
-                    });
-                    $("#tabela tbody").html(conteudo);
-                    $("#quantidade").html(lista.length);
-                },
-                error: function (e) {
-                    $("#mensagem").html("Erro: " + e.status);
-                }
-            });
-        });
-    </script>
+    <script src="~/Scripts/Estoque/Consulta.js"></script>
 }
 
 <h4>Consulta de Estoque</h4>
@@ -96,7 +67,7 @@
             </div>
 
             <div class="modal-footer">
-                <button class="btn btn-danger">
+                <button id="btnexclusao" class="btn btn-danger">
                     Confirmar Exclusão
                 </button>
             </div>
@@ -124,7 +95,7 @@
                 <br />
 
                 <label>Descrição:</label>
-                <input type="text" id="nome" class="form-control" readonly="readonly" />
+                <input type="text" id="descricao" class="form-control" readonly="readonly" />
                 <br />
 
                 <label>Tipo do Estoque:</label>
@@ -141,7 +112,7 @@
             </div>
 
             <div class="modal-footer">
-                <button class="btn btn-primary">
+                <button id="btnatualizacao" class="btn btn-primary">
                     Confirmar Atualização
                 </button>
             </div>

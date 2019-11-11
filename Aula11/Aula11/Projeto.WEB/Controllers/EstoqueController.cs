@@ -71,5 +71,64 @@ namespace Projeto.WEB.Controllers
             }
             
         }
+
+
+        public JsonResult ConsultarEstoquePorId(int idEstoque)
+        {
+            try
+            {   
+                EstoqueRepositorio rep = new EstoqueRepositorio();
+                EstoqueConsultaModel model = new EstoqueConsultaModel();
+                Estoque e = rep.FindById(idEstoque);
+                model.IdEstoque = e.IdEstoque;
+                model.Nome = e.Nome;
+                model.Descricao = e.Descricao;
+                model.IdTipo = (int) e.Tipo;
+                model.Tipo = e.Tipo.ToString();
+
+                return Json(model, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception e)
+            {
+                return Json(e.Message, JsonRequestBehavior.AllowGet);
+            }
+        }
+
+        public JsonResult AtualizarEstoque(EstoqueEdicaoModel model)
+        {
+            try
+            {
+                Estoque e = new Estoque();
+                e.IdEstoque = model.IdEstoque;
+                e.Nome = model.Nome;
+                e.Descricao = model.Descricao;
+                e.Tipo = (TipoEstoque)model.Tipo;
+
+                EstoqueRepositorio rep = new EstoqueRepositorio();
+                rep.Update(e);
+
+                return Json("Estoque atualizado com sucesso.");
+            }
+            catch (Exception e)
+            {
+                return Json(e.Message);
+            }
+        }
+
+        public JsonResult ExcluirEstoque(int idEstoque)
+        {
+            try
+            {
+                EstoqueRepositorio rep = new EstoqueRepositorio();
+                rep.Delete(idEstoque);
+
+                return Json("Estoque excluído com sucesso!");
+            }
+            catch (Exception e)
+            {
+                return Json(e.Message);
+            }
+        }
+
     }
 }

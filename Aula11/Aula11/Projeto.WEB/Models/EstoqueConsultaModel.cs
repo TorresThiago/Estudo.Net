@@ -10,6 +10,7 @@ namespace Projeto.WEB.Models
         public int IdEstoque { get; set; }
         public string  Nome { get; set; }
         public string Descricao { get; set; }
+        public int IdTipo { get; set; }
         public string Tipo { get; set; }
     }
 }
