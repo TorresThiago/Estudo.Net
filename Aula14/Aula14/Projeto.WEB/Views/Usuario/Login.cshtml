@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h4>Login de Usuários</h4>
+<a href="/Home/Index">Voltar</a>
+
+<div  class="row">
+    <div class="col-md-3">
+        @model Projeto.WEB.Models.UsuarioLoginModel
+
+        @using (Html.BeginForm())
+        {
+            <label>Login de Acesso:</label>
+            @Html.TextBoxFor(model => model.Login, new { @class = "form-control", @placeholder = "Login de Acesso"})
+            
+            <span class="text-danger">
+                @Html.ValidationMessageFor(model => model.Login)
+            </span>
+            <br />
+
+            <label>Senha de Acesso:</label>
+            @Html.PasswordFor(model => model.Senha, new { @class="form-control", @placeholder="Senha de Acesso"})
+            <span class="text-danger">
+                @Html.ValidationMessageFor(model => model.Senha)
+            </span>
+            <br />
+
+            <input type="submit" value="Acessar Sistema" class="btn btn-success"/>
+        }
+    </div>
+</div>
+

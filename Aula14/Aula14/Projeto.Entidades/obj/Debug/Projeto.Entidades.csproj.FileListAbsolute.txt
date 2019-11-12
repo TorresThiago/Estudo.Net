@@ -1,0 +1,5 @@
+E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.Entidades\bin\Debug\Projeto.Entidades.dll
+E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.Entidades\bin\Debug\Projeto.Entidades.pdb
+E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.Entidades\obj\Debug\Projeto.Entidades.csproj.CoreCompileInputs.cache
+E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.Entidades\obj\Debug\Projeto.Entidades.dll
+E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.Entidades\obj\Debug\Projeto.Entidades.pdb

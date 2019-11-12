@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Cadastro";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h4>Cadastro de Usuário:</h4>
+<a href="/Home/Index">Voltar</a>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        @model Projeto.WEB.Models.UsuarioCadastroModel
+
+        @using (Html.BeginForm())
+        {
+            <label>Nome do Usuário:</label>
+            @Html.TextBoxFor(model => model.Nome, new { @class = "form-control", @placeholder = "Nome do Usuário" })
+            <span class="text-danger">
+                @Html.ValidationMessageFor(model => model.Nome)
+            </span>
+            <br />
+
+            <label>Login de Acesso:</label>
+            @Html.TextBoxFor(model => model.Login, new { @class = "form-control", @placeholder = "Login do Usuário" })
+            <span class="text-danger">
+                @Html.ValidationMessageFor(model => model.Login)
+            </span>
+            <br />
+
+            <label>Senha:</label>
+            @Html.PasswordFor(model => model.Senha, new { @class = "form-control", @placeholder = "Senha" })
+            <span class="text-danger">
+                @Html.ValidationMessageFor(model => model.Senha)
+            </span>
+            <br />
+
+            <label>Confirme sua Senha:</label>
+            @Html.PasswordFor(model => model.SenhaConfirm, new { @class = "form-control", @placeholder = "Confirme sua Senha" })
+            <span class="text-danger">
+                @Html.ValidationMessageFor(model => model.SenhaConfirm)
+            </span>
+            <br />
+
+            <label>Envie sua Foto:</label>
+            <input type="file" name="Foto" class="form-control" />
+            <span class="text-danger"> 
+                @Html.ValidationMessageFor(model => model.Foto) 
+            </span>
+            <br />
+
+            <input type="submit" value="Cadastrar Usuário" class="btn btn-success" />
+        }
+    </div>
+</div>
