@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using Projeto.WEB.Validations;
 
 namespace Projeto.WEB.Models
 {
@@ -22,6 +23,7 @@ namespace Projeto.WEB.Models
         public string SenhaConfirm { get; set; }
 
         [Required(ErrorMessage = "Envie a Foto.")]
+        [UploadFotoValidation(ErrorMessage = "Envie apenas imagens.")]
         public HttpPostedFileBase Foto { get; set; }
     }
 }

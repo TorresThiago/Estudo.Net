@@ -73,3 +73,9 @@ E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.WEB\obj\Debug\Projeto.WEB.csproj.Copy
 E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.WEB\obj\Debug\Projeto.WEB.dll
 E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.WEB\obj\Debug\Projeto.WEB.pdb
 E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.WEB\obj\Debug\Projeto.WEB.csprojAssemblyReference.cache
+E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.WEB\bin\Projeto.DAL.dll
+E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.WEB\bin\Projeto.Entidades.dll
+E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.WEB\bin\Projeto.DAL.pdb
+E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.WEB\bin\Projeto.Entidades.pdb
+E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.WEB\bin\Projeto.Utils.dll
+E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.WEB\bin\Projeto.Utils.pdb

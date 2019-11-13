@@ -163,6 +163,7 @@
     <Compile Include="Models\UsuarioCadastroModel.cs" />
     <Compile Include="Models\UsuarioLoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validations\UploadFotoValidation.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -180,12 +181,23 @@
     <Folder Include="Areas\AreaRestrita\Controllers\" />
     <Folder Include="Areas\AreaRestrita\Models\" />
     <Folder Include="Areas\AreaRestrita\Views\Shared\" />
+    <Folder Include="Imagens\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Projeto.DAL\Projeto.DAL.csproj">
+      <Project>{6793c415-f5a7-4c3e-a43a-b4145f3dd49c}</Project>
+      <Name>Projeto.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Projeto.Entidades\Projeto.Entidades.csproj">
+      <Project>{ffa17ade-164c-497f-a607-84779155eac9}</Project>
+      <Name>Projeto.Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

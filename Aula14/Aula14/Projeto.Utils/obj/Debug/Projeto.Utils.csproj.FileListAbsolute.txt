@@ -1,0 +1,6 @@
+E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.Utils\bin\Debug\Projeto.Utils.dll
+E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.Utils\bin\Debug\Projeto.Utils.pdb
+E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.Utils\obj\Debug\Projeto.Utils.csprojAssemblyReference.cache
+E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.Utils\obj\Debug\Projeto.Utils.csproj.CoreCompileInputs.cache
+E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.Utils\obj\Debug\Projeto.Utils.dll
+E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.Utils\obj\Debug\Projeto.Utils.pdb
