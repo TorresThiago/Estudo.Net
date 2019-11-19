@@ -22,8 +22,8 @@ namespace Projeto.WEB.Models
         [Required(ErrorMessage = "Confirme a Senha.")]
         public string SenhaConfirm { get; set; }
 
-        [Required(ErrorMessage = "Envie a Foto.")]
         [UploadFotoValidation(ErrorMessage = "Envie apenas imagens.")]
+        [Required(ErrorMessage = "Envie a Foto.")]        
         public HttpPostedFileBase Foto { get; set; }
     }
 }

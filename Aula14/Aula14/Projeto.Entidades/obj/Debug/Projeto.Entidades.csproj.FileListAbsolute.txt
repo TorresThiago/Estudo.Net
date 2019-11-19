@@ -4,3 +4,8 @@ E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.Entidades\obj\Debug\Projeto.Entidades
 E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.Entidades\obj\Debug\Projeto.Entidades.dll
 E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.Entidades\obj\Debug\Projeto.Entidades.pdb
 E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.Entidades\obj\Debug\Projeto.Entidades.csprojAssemblyReference.cache
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula14\Aula14\Projeto.Entidades\bin\Debug\Projeto.Entidades.dll
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula14\Aula14\Projeto.Entidades\bin\Debug\Projeto.Entidades.pdb
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula14\Aula14\Projeto.Entidades\obj\Debug\Projeto.Entidades.csprojAssemblyReference.cache
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula14\Aula14\Projeto.Entidades\obj\Debug\Projeto.Entidades.dll
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula14\Aula14\Projeto.Entidades\obj\Debug\Projeto.Entidades.pdb

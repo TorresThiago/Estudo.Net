@@ -4,3 +4,8 @@ E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.Utils\obj\Debug\Projeto.Utils.csprojA
 E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.Utils\obj\Debug\Projeto.Utils.csproj.CoreCompileInputs.cache
 E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.Utils\obj\Debug\Projeto.Utils.dll
 E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.Utils\obj\Debug\Projeto.Utils.pdb
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula14\Aula14\Projeto.Utils\bin\Debug\Projeto.Utils.dll
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula14\Aula14\Projeto.Utils\bin\Debug\Projeto.Utils.pdb
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula14\Aula14\Projeto.Utils\obj\Debug\Projeto.Utils.csprojAssemblyReference.cache
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula14\Aula14\Projeto.Utils\obj\Debug\Projeto.Utils.dll
+C:\Users\torre\Documents\GIT\Estudo.Net\Aula14\Aula14\Projeto.Utils\obj\Debug\Projeto.Utils.pdb
