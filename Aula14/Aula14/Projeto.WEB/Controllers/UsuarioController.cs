@@ -7,6 +7,8 @@ using System.Web.Mvc;
 using Projeto.DAL;
 using Projeto.Entidades;
 using System.IO;
+using System.Web.Security;
+using Newtonsoft.Json;
 
 namespace Projeto.WEB.Controllers
 {
@@ -31,7 +33,23 @@ namespace Projeto.WEB.Controllers
 
                     if(u != null)
                     {
-                        ViewBag.Mensagem = "Usuario encontrado.";
+                        UsuarioAutenticadoModel auth = new UsuarioAutenticadoModel();
+                        auth.IdUsuario = u.IdUsuario;
+                        auth.Nome = u.Nome;
+                        auth.Login = u.Login;
+                        auth.DataHoraAcesso = DateTime.Now;
+                        auth.HostOrigem = Request.UserHostAddress;
+
+                        string json = JsonConvert.SerializeObject(auth);
+
+                        FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(json, false, 10);
+
+                        HttpCookie cookie = new HttpCookie(FormsAuthentication.FormsCookieName,FormsAuthentication.Encrypt(ticket));
+
+                        Response.Cookies.Add(cookie);
+
+                        return RedirectToAction("Index", "Principal", new { area = "AreaRestrita"});
+
                     }
                     else
                     {

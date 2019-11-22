@@ -159,3 +159,5 @@ C:\Users\torre\Documents\GIT\Estudo.Net\Aula14\Aula14\Projeto.WEB\obj\Debug\Proj
 C:\Users\torre\Documents\GIT\Estudo.Net\Aula14\Aula14\Projeto.WEB\obj\Debug\Projeto.WEB.csproj.CopyComplete
 C:\Users\torre\Documents\GIT\Estudo.Net\Aula14\Aula14\Projeto.WEB\obj\Debug\Projeto.WEB.dll
 C:\Users\torre\Documents\GIT\Estudo.Net\Aula14\Aula14\Projeto.WEB\obj\Debug\Projeto.WEB.pdb
+E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.WEB\bin\Newtonsoft.Json.dll
+E:\Estudo\Estudo.Net\Aula14\Aula14\Projeto.WEB\bin\Newtonsoft.Json.xml
